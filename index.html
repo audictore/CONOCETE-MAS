@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <li>
+                <a href=""><div></div>&nbsp;<p>Anywhere<span>.</span></p></a>
+            </li>
+            <li>
+                <a href="">Home</a>
+            </li>
+            <li>
+                <a href="">Join</a>
+            </li>
+        </nav>
+    </header>
+
+    <main>
+        <div>
+            <form id="form_registrer">
+                <h6>CONOCETE MAS</h6>
+                <h1>Vamos a comenzar<span>.</span></h1>
+                <span>Already A Member? <a href="">Log In</a></span>
+    
+                <input type="text" placeholder="Ingrese su nombre" class="name_user" id="name_user">
+                <div class="sexo">
+                    <span>Selecciona un sexo</span>
+                    <div class="sexo_elecciones">
+                        <li>
+                            <input type="radio" name="sex" class="sex_user_hombre" id="sex_user_hombre" value="Masculino">
+                            <label class="input_hombre" for="sex_user_hombre">Masculino</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sex" class="sex_user_mujer" id="sex_user_mujer" value="Femenino">
+                            <label class="input_mujer" for="sex_user_mujer">Femenino</label>
+                        </li>
+                    </div>
+                    
+                </div>
+                <input type="text" placeholder="Ingrese su edad" class="age_user" id="age_user">
+                <div class="juegos">
+                    <span>Selecciona tus juegos favoritos</span>
+                    <div class="juegos_selecciones">
+                        <li>
+                            <input type="checkbox" name="juego" class="juego_1" id="juego_1" value="Dark souls 1">
+                            <label class="input_DS1" for="juego_1">Dark souls 1</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="juego" id="juego_2" value="Dark souls 2">
+                            <label class="input_DS2" for="juego_2">Dark souls 2</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="juego" id="juego_3" value="Dark souls 3">
+                            <label class="input_DS3" for="juego_3">Dark souls 3</label>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="juego" id="juego_4" value="Elden ring">
+                            <label class="input_EldenRing" for="juego_4">Elden ring</label>
+                        </li>
+                    </div>
+                </div>
+                <div class="selects">
+                    <select name="opciones_ciudad" class="ciudad_user" id="ciudad_user">
+                        <option class="select_ciudad" value="">Elige la ciudad en la que vives</option>
+                        <option value="Pachuca">Pachuca</option>
+                        <option value="Mazatlan">Mazatlan</option>
+                        <option value="Monterrey">Monterrey</option>
+                    </select>
+                    <select name="opciones_pelicula" class="pelicula_user" id="pelicula_user">
+                        <option value="Elige tu pelicula preferida">Elige tu pelicula preferida</option>
+                        <option value="X-men">X-men</option>
+                        <option value="Gran Torino">Gran Torino</option>
+                        <option value="Los 8 odiosos">Los 8 odiosos</option>
+                    </select>
+                </div>
+                <span class="span_error" id="span_error"></span>
+                <button type="submit" id="submit_register">Registrar</button>
+                    
+            </form>
+        </div>
+        
+
+        <section>
+            <span class="span_pelicula" id="span_pelicula"></span>
+            <span class="img_pelicula" id="img_pelicula"></span>
+        </section>
+    </main>
+
+    <script src="./main.js"></script>
+</body>
+</html>
