@@ -20,7 +20,7 @@ function validar_formulario(e){
     if(name_user.match(/[0-9]/)){
         span_error.innerHTML = "El nombre no debe tener ningun numero."
         valid = false
-    }else if(name_user.match(/[!@#$%^&*(),.?":{}|<>]/)){
+    }else if(name_user.match(/[!+-@#$%^&*();,.¿?":{}|<>]/)){
         span_error.innerHTML = "El nombre no debe tener ningun caracter especial."
         valid = false
     }else if(name_user == ""){
@@ -41,7 +41,7 @@ function validar_formulario(e){
     }else if(age_user.match(/[A-Z]/)){
         span_error.innerHTML = "La edad no debe tener ninguna letra."
         valid = falseelse 
-    }else if(age_user.match(/[!@#$%^&*(),.?":{}|<>]/)){
+    }else if(age_user.match(/[!+-@#$%^&*();,.¿?":{}|<>]/)){
         span_error.innerHTML = "La edad no debe tener ningun caracter especial."
         valid = false
     }else if(age_user == ""){
