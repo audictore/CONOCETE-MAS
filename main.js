@@ -69,15 +69,15 @@ function validar_formulario(e){
     }
 
     //validar pelicula
-    if(pelicula_user === ""){
+    if(pelicula_user == "Elige tu pelicula preferida"){
         span_error.innerHTML = "Debes elegir una pelicula."
         valid = false;
     }
 
     //mensaje de salida
-    if(valid=true){
+    if(valid == true){
         alert("Hola "+name_user+" tu sexo es: "+sex_user.value+". Tu edad es de: "+age_user+" años. Tu juego favorito es: "+juego_user[0].value+". Vives en: "+ciudad_user+". Tu pelicula favorita es: "+pelicula_user)
-        
+        span_error.innerHTML = ""
     }
 
 }
