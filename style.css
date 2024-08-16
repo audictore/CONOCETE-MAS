@@ -247,9 +247,12 @@ body main div:first-child form .sexo li input{
     display: none;
 }
 
-/*text Age*/
+/*number Age*/
 
 body main div:first-child form .age_user{
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: textfield;
     width: 80%;
     height: 3rem;
     display: flex;
@@ -257,7 +260,15 @@ body main div:first-child form .age_user{
     color: var(--color-4);
     border: none;
     border-radius: 10px;
+    outline: none;
 }
+
+body main div:first-child form .age_user::-webkit-outer-spin-button,
+body main div:first-child form .age_user::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+   
 
 /*Checked games*/
 

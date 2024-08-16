@@ -9,10 +9,12 @@ function validar_formulario(e){
     const sex_user = document.querySelector('input[name="sex"]:checked')
     const age_user = document.getElementById("age_user").value
     const juego_user = document.querySelectorAll('input[name="juego"]:checked')
+    const juegosSeleccionados = Array.from(juego_user).map(juego => juego.value).join(", ")
     const ciudad_user = document.getElementById("ciudad_user").value
     const pelicula_user = document.getElementById("pelicula_user").value
     const span_error = document.getElementById("span_error")
 
+    span_error.innerHTML = ""
     let valid = true;
 
 
@@ -35,31 +37,16 @@ function validar_formulario(e){
     }
 
     //validar edad
-    if(age_user.match(/[a-z]/)){
-        span_error.innerHTML = "La edad no debe tener ninguna letra."
-        valid = false
-    }else if(age_user.match(/[A-Z]/)){
-        span_error.innerHTML = "La edad no debe tener ninguna letra."
-        valid = falseelse 
-    }else if(age_user.match(/[!+-@#$%^&*();,.¿?":{}|<>]/)){
-        span_error.innerHTML = "La edad no debe tener ningun caracter especial."
-        valid = false
-    }else if(age_user == ""){
+    if(age_user == ""){
         span_error.innerHTML = "Debes escribir alguna edad."
-        valid = false
-    }else if(age_user < 0){
-        span_error.innerHTML = "Debes escribir una edad valida."
         valid = false
     }
 
     //validar juegos
     if(juego_user.length < 1) {
-        span_error.innerHTML = "Debes elegir un juego."
+        span_error.innerHTML = "Debes elegir almenos un juego."
         valid = false
         
-    }else if(juego_user.length > 1){
-        span_error.innerHTML = "Debes elegir un juego."
-        valid = false
     }
     
     //validar ciudad
@@ -76,11 +63,12 @@ function validar_formulario(e){
 
     //mensaje de salida
     if(valid == true){
-        alert("Hola "+name_user+" tu sexo es: "+sex_user.value+". Tu edad es de: "+age_user+" años. Tu juego favorito es: "+juego_user[0].value+". Vives en: "+ciudad_user+". Tu pelicula favorita es: "+pelicula_user)
+        alert("Hola "+name_user+" tu sexo es: "+sex_user.value+". Tu edad es de: "+age_user+" años. Tu juego favorito es: "+juegosSeleccionados+". Vives en: "+ciudad_user+". Tu pelicula favorita es: "+pelicula_user)
         span_error.innerHTML = ""
     }
 
 }
+
 
 pelicula_user.addEventListener("change", mostrar_Pelicula)
 
